@@ -19,7 +19,6 @@
 #include <string>
 #include "cripto_header.h"
 #include <fstream>//Para la entrada/salida de ficheros
-#include <stdlib.h>
 std::string Lectura(std::string ruta_entrada){
     //ifstream se usa para leer archivos. Retira ficheros del flujo.
     std::ifstream inFile;
