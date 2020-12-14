@@ -99,4 +99,7 @@ int main(int argc, char **argv){
     default:
         break;
     }
+    std::cout<<"El número de palabras en el fichero es: "<<NumeroPalabras(Lectura(ruta_fichero_entrada));
+    std::cout<<"\n";
+
 }

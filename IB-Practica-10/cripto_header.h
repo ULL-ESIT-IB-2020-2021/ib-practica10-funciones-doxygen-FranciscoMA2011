@@ -16,3 +16,4 @@
 
 std::string CriptografiaCesar (std::string texto, std::string operacion, std::string clave);
 std::string CriptografiaXor (std::string texto, std::string operacion, std::string clave);
+int NumeroPalabras (std::string texto);

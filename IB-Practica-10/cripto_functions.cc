@@ -125,3 +125,25 @@ std::string CriptografiaXor (std::string texto, std::string operacion, std::stri
         break;
     }
 }
+
+int NumeroPalabras (std::string texto){
+   std::string palabra;
+ 
+   bool inSpaces = true;
+   int numWords = 0;
+ 
+  for ( char const &caracter: texto)
+  {
+     if (std::isspace(caracter))
+     {
+        inSpaces = true;
+     }
+     else if (inSpaces)
+     {
+        numWords++;
+        inSpaces = false;
+     }
+  }
+ 
+  return numWords;
+}
