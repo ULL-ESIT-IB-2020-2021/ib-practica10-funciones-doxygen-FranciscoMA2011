@@ -12,11 +12,14 @@
   *        El método xor consiste en aplicar la operación xor a cada uno de los caracteres, con una clave dada.
   * @bug No hay bugs conocidos
   * @see https://www.cs.cmu.edu/~410/doc/doxygen.html
+  * @see https://es.wikipedia.org/wiki/Cifrado_XOR
+  * @see https://es.wikipedia.org/wiki/Cifrado_C%C3%A9sar
   */
 #include <iostream>
 #include <string>
 #include <vector>
 #include <algorithm>
+//Si se usa este tipo de criptografía desplazando cada letra tres caracteres, se usa el mismo cifrado que en el Imperio Romano
 std::string CriptografiaCesar (std::string texto, std::string operacion, std::string clave){
     int operacion_entero;
             //cambiar operacion a entero para poder usar un switch
@@ -31,7 +34,7 @@ std::string CriptografiaCesar (std::string texto, std::string operacion, std::st
 
     size_t longitud_texto{texto.size()};
     char caracter;
-    //Switch
+
     switch (operacion_entero)
     {
     case (1):
@@ -100,12 +103,11 @@ std::string CriptografiaXor (std::string texto, std::string operacion, std::stri
                 operacion_entero=2;
             }
     size_t longitud_texto{texto.size()};
-    //Switch
+
     switch (operacion_entero)
     {
     case (1):
         for (size_t i=0; i<=longitud_texto; i++){
-            //Si la clave fuera un caracter estático, la encripción sería ilegible
             texto[i]=texto[i]^clave[i];
         }
         return(texto);
@@ -113,7 +115,6 @@ std::string CriptografiaXor (std::string texto, std::string operacion, std::stri
     case (2):
         //Para un correcto funcionamiento, no debe diferenciarse el procedimiento del encriptado con respecto al desencriptado
         for (size_t i=0; i<=longitud_texto; i++){
-            //Si la clave fuera un caracter estático, la encripción sería ilegible
             texto[i]=texto[i]^clave[i];
         }
         return(texto);

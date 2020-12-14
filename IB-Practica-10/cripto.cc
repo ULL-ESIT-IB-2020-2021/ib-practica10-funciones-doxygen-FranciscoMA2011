@@ -21,6 +21,7 @@
 #include <fstream>//Para la entrada/salida de ficheros
 #include <stdlib.h>
 std::string Lectura(std::string ruta_entrada){
+    //ifstream se usa para leer archivos. Retira ficheros del flujo.
     std::ifstream inFile;
     inFile.open(ruta_entrada);
     //Comprobar que el archivo se abrió correctamente
@@ -40,6 +41,7 @@ std::string Lectura(std::string ruta_entrada){
     return (archivo_string);
 }
 void Escritura(std::string ruta_salida, std::string contenidos_archivo){
+    //ofstream se usa para crear archivos, se crea un archivo con nombre "ejemplo.txt". Añade ficheros al flujo.
     std::ofstream outFile;
     outFile.open(ruta_salida);
     //Volvemos a comprobar si se ha abierto el archivo para su escritura
@@ -85,7 +87,6 @@ int main(int argc, char **argv){
     Usage(argc, argv);
     std::string ruta_fichero_entrada{argv[1]};
     std::string ruta_fichero_salida{argv[2]};
-    //ofstream se usa para crear archivos, se crea un archivo con nombre "ejemplo.txt". Añade ficheros al flujo.
     int metodo{std::stoi (argv[3])};
     std::string password {argv[4]};
     std::string operacion{argv[5]};
